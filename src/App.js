@@ -1,5 +1,5 @@
 import './App.css';
-import ChessWrapper from './components/ChessWrapper';
+import ChessWrapper from './components/ChessBoard/ChessWrapper';
 
 function App() {
   return (
