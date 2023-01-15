@@ -1,9 +1,10 @@
 import './App.css';
+import ChessWrapper from './components/ChessWrapper';
 
 function App() {
   return (
     <div>
-      Chess Board
+      <ChessWrapper />
     </div>
   );
 }
