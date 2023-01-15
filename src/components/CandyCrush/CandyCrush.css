@@ -1,0 +1,18 @@
+.candy-crush-app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game{
+    height:48rem;
+    width:48rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game img{
+    height:6rem;
+    width:6rem;
+}
