@@ -21,6 +21,35 @@ const verticalAxis = ["1", "2", "3", "4", "5", "6", "7", "8"]
 const ChessBoard = () => {
     var board = [];
     var image = null;
+    var activePiece = null;
+
+    const grabPiece = (e) => {
+        const element = e.target
+
+        if (element.classList.contains("chess-piece")) {
+            const x = e.clientX - 40;
+            const y = e.clientY - 40;
+            element.style.position = "absolute"
+            element.style.left = `${x}px`
+            element.style.top = `${y}px`
+
+            activePiece = element
+        }
+    }
+
+    const movePiece = (e) => {
+        if (activePiece) {
+            const x = e.clientX - 40;
+            const y = e.clientY - 40;
+            activePiece.style.position = "absolute"
+            activePiece.style.left = `${x}px`
+            activePiece.style.top = `${y}px`
+        }
+    }
+
+    const dropPiece = (e) => {
+        activePiece = null;
+    }
 
 
     for (var j = verticalAxis.length - 1; j >= 0; j--)
@@ -44,7 +73,12 @@ const ChessBoard = () => {
         }
 
     return (
-        <div id="chessboard">{board}</div>
+        <div id="chessboard"
+            onMouseUp={(e) => { dropPiece(e) }}
+            onMouseMove={(e) => movePiece(e)}
+            onMouseDown={(e) => grabPiece(e)}
+        >{board}
+        </div>
     )
 }
 
