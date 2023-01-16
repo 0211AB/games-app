@@ -1,0 +1,136 @@
+.wordle {
+    background-color: #121213;
+    height: 100vh;
+}
+
+.wordle-nav {
+    height: 5rem;
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid grey;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+}
+
+.wordle-nav h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.wordle-game {
+    width: 98vw;
+    height: 45rem;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    flex-direction: column;
+}
+
+
+.wordle-board {
+    width: 25rem;
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.wordle-row {
+    flex: 33%;
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.wordle-letter {
+    flex: 33%;
+    height: 100%;
+    border: 1px solid #3a393c;
+    border-radius: 4px;
+    color:#fff;
+    margin: 5px;
+    display: grid;
+    place-items: center;
+    font-size: 2.25rem;
+    font-weight: bolder;
+}
+
+#correct {
+    background-color: #528d4e;
+}
+
+#almost {
+    background-color: #b49f39;
+}
+
+#error {
+    background-color: #3a393c;
+}
+
+.wordle-keyboard {
+    width: 40rem;
+    height: 12rem;
+    margin-top: 60px;
+}
+
+.line1 {
+    flex: 33%;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.line2 {
+    flex: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+}
+
+.line3 {
+    flex: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+}
+
+.wordle-key {
+    width: 3rem;
+    height: 4rem;
+    margin: 5px;
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    background-color: grey;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+#big {
+    width: 6rem;
+}
+
+#disabled {
+    background-color: #3a393c;
+}
+
+.gameOver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40rem;
+    height: 12rem;
+    margin-top: 60px;
+}
+
+.gameOver h2,.gameOver h1{
+    color:#fff;
+    text-transform: capitalize;
+}
