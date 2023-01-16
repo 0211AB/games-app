@@ -1,0 +1,41 @@
+.content-wrapper {
+    width: 80%;
+    min-height: 80vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.content-desc h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.content-desc p {
+    width: 40rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-bottom: 10px;
+}
+
+.content-desc span {
+    color: #FEC53A;
+}
+
+#btn2 {
+    width: 20rem;
+    height: 10vh;
+    padding-left: 20px;
+    outline: none;
+    border: none;
+    background: #FEC53A;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    clip-path: polygon(0 0, 74% 0, 100% 100%, 0% 100%);
+    border-radius: 20px;
+    text-align: left;
+    color: #1a0327;
+}
