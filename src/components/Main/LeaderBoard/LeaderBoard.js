@@ -30,21 +30,21 @@ const LeaderBoard = () => {
                     <tbody>
                         <tr>
                             <td id="winner">1</td>
-                            <td><img src={one} /><p> Jose Brag</p></td>
+                            <td><img src={one} alt="First" /><p> Jose Brag</p></td>
                             <td>239</td>
                             <td>12.54</td>
                         </tr>
 
                         <tr>
                             <td id="runner-up">2</td>
-                            <td><img src={two} /><p> Lily Simons</p></td>
+                            <td><img src={two} alt="Second" /><p> Lily Simons</p></td>
                             <td>209</td>
                             <td>10.2</td>
                         </tr>
 
                         <tr>
                             <td id="second-runner-up">3</td>
-                            <td><img src={three} /><p> Tom Higgle</p></td>
+                            <td><img src={three} alt="Third" /><p> Tom Higgle</p></td>
                             <td>154</td>
                             <td>8.4</td>
                         </tr>

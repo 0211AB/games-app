@@ -1,0 +1,15 @@
+.google-container {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-container h1 {
+    color: white
+}
+
+.google-container img{
+    height:10rem
+}
