@@ -1,5 +1,6 @@
 import './App.css';
-import Main from './components/Main/Main';
+import LeaderBoard from './components/Main/LeaderBoard/LeaderBoard';
+// import Main from './components/Main/Main';
 // import CandyCrush from './components/CandyCrush/CandyCrush'; 
 // import ChessWrapper from './components/ChessBoard/ChessWrapper';
 // import Wordle from './components/Wordle/Wordle';
@@ -10,7 +11,8 @@ function App() {
       {/* <ChessWrapper /> */}
       {/* <CandyCrush /> */}
       {/* <Wordle /> */}
-      <Main />
+      {/* <Main /> */}
+      <LeaderBoard />
     </div>
   );
 }

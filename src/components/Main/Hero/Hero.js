@@ -1,6 +1,5 @@
 import React from 'react'
 import './Hero.css'
-import trophy from '../../../assets/home/trophy.png'
 
 const Hero = () => {
     return (
