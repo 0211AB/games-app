@@ -5,7 +5,6 @@
     background-position: center !important;
     background-attachment: fixed !important;
     background-repeat: no-repeat !important;
-    padding:2rem;
 }
 
 .section-3-wrapper {
@@ -14,38 +13,90 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap:5rem;
+    gap: 1rem;
+    padding: 4px;
 }
 
-.feedback-box{
+.feedback-box {
+    width: 40rem;
+    height: 20rem;
+    padding: 0 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    background: rgba(0, 0, 0, 0.767);
+    border-radius: 10px;
 }
 
 .feedback {
-    width: 20rem;
-    height: 20rem;
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-position: center !important;
     background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.feedback img {
+    border-radius: 10px;
+    height: 15rem;
+    width: 15rem;
+    object-fit: cover;
 }
 
 .feedback-desc {
-    border-radius: 10px;
-    width: 25rem;
-    height: 20rem;
-    background: rgba(0, 0, 0, 0.767);
-    padding: 10px;
+    padding: 0 10px;
     color: #fff;
-    margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.feedback-desc .far {
-    color: #FEC53A;
-    font-size: 30px;
+.feedback-desc p,
+.feedback-desc h2 {
+    width: 20rem;
+    text-align: center;
+}
+
+.feedback-desc h4{
+    color:  #FEC53A;
+}
+
+
+@media (max-width:1300px) {
+    .feedback-box {
+        width: 75%;
+    }
+}
+
+@media (max-width:840px) {
+    .feedback-box {
+        width: 90%;
+    }
+}
+
+@media (max-width:725px) {
+
+    .feedback-box{
+        height: 16rem;
+    }
+
+    .feedback img {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .feedback-desc p,
+    .feedback-desc h2,
+    .feedback-desc h4 {
+        font-size: smaller;
+        width: auto;
+        text-align: center;
+
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+    }
 }

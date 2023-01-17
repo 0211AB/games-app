@@ -30,34 +30,8 @@ header {
     font-size: 50px;
 }
 
-ul.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
-
-ul.navbar li {
-    text-align: center;
-    width: 10rem;
-}
-
-ul.navbar li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-ul.navbar li a.active {
-    color: #FEC53A;
-}
-
-ul.navbar li a:hover:not(.active) {
-    color: #FEC53A;
-}
-
 #btn {
-    width: 15rem;
+    width: 17rem;
     height: 10vh;
     background: #FEC53A;
     color: #000;
@@ -68,4 +42,17 @@ ul.navbar li a:hover:not(.active) {
     font-weight: bold;
     text-align: right;
     padding-right: 40px;
+}
+
+@media (max-width:600px) {
+    #btn {
+        width: 15rem;
+        padding-right: 20px;
+        font-size: small;
+    }
+
+    .logo {
+        width: 15rem;
+        font-size: small;
+    }
 }

@@ -39,3 +39,27 @@
     text-align: left;
     color: #1a0327;
 }
+
+
+@media (max-width:768px)
+{
+    .content-desc p {
+        width: 30rem;
+    }
+
+    #btn2{
+        height:5rem;
+    }
+}
+
+@media (max-width:540px)
+{
+    .content-desc h1{
+        font-size: 2rem;
+    }
+
+    .content-desc p {
+        font-size: 1rem;
+        width: 20rem;
+    }
+}

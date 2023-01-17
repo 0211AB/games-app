@@ -7,12 +7,10 @@ const Hero = () => {
         <div className="content-wrapper">
             <div className="content-desc">
                 <h1>THE GAME ZONE</h1>
-                <p>Compete with <span> Gamers </span>all around the world in this immense challenge and be the
-                    winner of all TIme.</p>
-                <p>Our Top Players are listed in the leaderboard below, click the
-                    button below to see the highscores.</p>
+                <p>Welcome to our <span> Ultimate </span> gaming destination! Whether you're into action, adventure, or strategy, we've got something for everyone ...</p>
+                <p>Play and compete with other gamers on our leaderboard to see who reigns supreme . Ready to play? Let's go!</p>
 
-                <button id="btn2">LEADERBOARD</button>
+                <button id="btn2">PLAY NOW</button>
             </div>
         </div>
     )

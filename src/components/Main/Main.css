@@ -8,6 +8,7 @@
 .logo-section ion-icon {
     font-size: 6rem;
     color: #FEC53A;
+    text-align: center;
 }
 
 .logo-section h1 {
@@ -15,4 +16,18 @@
     font-size: 2rem;
     color: #FEC53A;
     margin-left: 10px;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+
+    .logo-section ion-icon {
+        font-size: 3rem;
+    }
+
+    .logo-section h1 {
+        width: 15rem;
+        font-size: 1.5rem;
+    }
+    
 }
