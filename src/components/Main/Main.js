@@ -18,8 +18,8 @@ const Main = () => {
                 <ion-icon name="game-controller"></ion-icon>
                 <h1>The Game Zone</h1>
             </div>
-            <Games/>
-            <Footer/>
+            <Games />
+            <Footer />
         </>
     )
 }

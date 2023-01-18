@@ -11,11 +11,11 @@ import tofe from '../../../assets/home/2048.jpg'
 
 const Games = () => {
     return (
-        <div className="section-3">
+        <div className="section-3" id="games">
             <div className="section-3-wrapper">
                 <div className='feedback-box'>
                     <div className="feedback">
-                        <img src={chess}></img>
+                        <img alt="Game" src={chess}></img>
                     </div>
                     <div className="feedback-desc">
                         <h2>CHESS</h2>
@@ -28,7 +28,7 @@ const Games = () => {
 
                 <div className='feedback-box'>
                     <div className="feedback">
-                        <img src={candycrush} />
+                        <img alt="Game" src={candycrush} />
                     </div>
                     <div className="feedback-desc">
                         <h2>CANDY CRUSH</h2>
@@ -41,7 +41,7 @@ const Games = () => {
 
                 <div className='feedback-box'>
                     <div className="feedback">
-                        <img src={wordle}></img>
+                        <img alt="Game" src={wordle}></img>
                     </div>
                     <div className="feedback-desc">
                         <h2>WORDLE</h2>
@@ -54,7 +54,7 @@ const Games = () => {
 
                 <div className='feedback-box'>
                     <div className="feedback">
-                        <img src={ttt}></img>
+                        <img alt="Game" src={ttt}></img>
                     </div>
                     <div className="feedback-desc">
                         <h2>TIC TAC TOE</h2>
@@ -69,7 +69,7 @@ const Games = () => {
 
                 <div className='feedback-box'>
                     <div className="feedback">
-                        <img src={mario}></img>
+                        <img alt="Game" src={mario}></img>
                     </div>
                     <div className="feedback-desc">
                         <h2>MARIO</h2>
@@ -82,7 +82,7 @@ const Games = () => {
 
                 <div className='feedback-box'>
                     <div className="feedback">
-                        <img src={wam}></img>
+                        <img alt="Game" src={wam}></img>
                     </div>
                     <div className="feedback-desc">
                         <h2>WHACK A MOLE</h2>
@@ -95,7 +95,7 @@ const Games = () => {
 
                 <div className='feedback-box'>
                     <div className="feedback">
-                        <img src={tetris}></img>
+                        <img alt="Game" src={tetris}></img>
                     </div>
                     <div className="feedback-desc">
                         <h2>TETRIS</h2>
@@ -108,7 +108,7 @@ const Games = () => {
 
                 <div className='feedback-box'>
                     <div className="feedback">
-                        <img src={tofe}></img>
+                        <img alt="Game" src={tofe}></img>
                     </div>
                     <div className="feedback-desc">
                         <h2>2048</h2>

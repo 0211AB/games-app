@@ -27,13 +27,13 @@
 #btn2 {
     width: 20rem;
     height: 10vh;
-    padding-left: 20px;
+    margin-top: 5rem;
+    padding: 0.5rem 30px;
     outline: none;
     border: none;
     background: #FEC53A;
     font-size: 1.2rem;
     font-weight: bold;
-    margin-top: 15px;
     clip-path: polygon(0 0, 74% 0, 100% 100%, 0% 100%);
     border-radius: 20px;
     text-align: left;
@@ -41,20 +41,18 @@
 }
 
 
-@media (max-width:768px)
-{
+@media (max-width:768px) {
     .content-desc p {
         width: 30rem;
     }
 
-    #btn2{
-        height:5rem;
+    #btn2 {
+        height: 5rem;
     }
 }
 
-@media (max-width:540px)
-{
-    .content-desc h1{
+@media (max-width:540px) {
+    .content-desc h1 {
         font-size: 2rem;
     }
 
