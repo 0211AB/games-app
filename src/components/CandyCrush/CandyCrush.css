@@ -1,18 +1,42 @@
-.candy-crush-app{
+.candy-crush-app {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 3rem;
+    flex-direction: column;
 }
 
-.game{
-    height:48rem;
-    width:48rem;
+.cc-score {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: aliceblue;
+}
+
+.game {
+    height: 32rem;
+    width: 32rem;
     display: flex;
     flex-wrap: wrap;
 }
 
-.game img{
-    height:6rem;
-    width:6rem;
+.game img {
+    height: 4rem;
+    width: 4rem;
+}
+
+.scoring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+    height: 80vh
+}
+
+.scoring a {
+    color: #FEC53A;
+    cursor: pointer;
+    font-size: 2rem;
 }

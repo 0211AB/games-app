@@ -6,6 +6,7 @@ const useUserStore = create(
         user: null,
         token: null,
         isLoggedIn: false,
+        setDetails: (state) => set(() => ({ user: state.user, token: state.token, isLoggedIn: true })),
         getUser: async (token) => {
             const response = await fetch(
                 `${process.env.REACT_APP_BASE_URL}/user-detail`,

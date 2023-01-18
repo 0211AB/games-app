@@ -59,8 +59,9 @@
     text-align: center;
 }
 
-.feedback-desc h4{
-    color:  #FEC53A;
+.feedback-desc h4 {
+    color: #FEC53A;
+    cursor: pointer;
 }
 
 
@@ -78,7 +79,7 @@
 
 @media (max-width:725px) {
 
-    .feedback-box{
+    .feedback-box {
         height: 16rem;
     }
 

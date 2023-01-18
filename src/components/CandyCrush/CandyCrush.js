@@ -8,6 +8,8 @@ import purple from '../../assets/candies/purple.webp'
 import red from '../../assets/candies/red.webp'
 import yellow from '../../assets/candies/yellow.webp'
 import blank from '../../assets/candies/blank.jpg'
+import NavBar from '../Main/NavBar/NavBar'
+import Counter from './Counter'
 
 const WIDTH = 8;
 const CANDY_COLORS = [
@@ -164,25 +166,33 @@ const CandyCrush = () => {
     }, [checkForCol4, checkForCol3, checkForRow4, checkForRow3, moveIntoSquareBelow, currentColorArrangement])
 
     return (
-        <div className='candy-crush-app'>
-            <div className='game'>
-                {currentColorArrangement.map((color, index) => {
-                    return <img
-                        key={index}
-                        src={color}
-                        alt={color}
-                        data-id={index}
-                        draggable={true}
-                        onDragStart={dragStart}
-                        onDragOver={(e) => { e.preventDefault() }}
-                        onDragEnter={(e) => { e.preventDefault() }}
-                        onDrop={dragDrop}
-                        onDragEnd={dragEnd}
-                    ></img>
-                })}
+        <>
+            <NavBar />
+            <div className='candy-crush-app'>
+                <div className='cc-score'>
+                    <h3>Current Score: {score}</h3>
+                    <Counter score={score} />
+                    <h3>Your High Score : 0</h3>
+                </div>
+                <br></br>
+                <div className='game'>
+                    {currentColorArrangement.map((color, index) => {
+                        return <img
+                            key={index}
+                            src={color}
+                            alt={color}
+                            data-id={index}
+                            draggable={true}
+                            onDragStart={dragStart}
+                            onDragOver={(e) => { e.preventDefault() }}
+                            onDragEnter={(e) => { e.preventDefault() }}
+                            onDrop={dragDrop}
+                            onDragEnd={dragEnd}
+                        ></img>
+                    })}
+                </div>
             </div>
-            <h1>{score}</h1>
-        </div>
+        </>
     )
 }
 

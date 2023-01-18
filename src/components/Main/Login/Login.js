@@ -4,12 +4,34 @@ import GoogleLogin from 'react-google-login'
 import trophy from '../../../assets/home/trophy.png'
 import { useEffect, useState } from 'react'
 import Loader from '../../Loader/Loader'
+import useUserStore from '../../../store/user'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(false)
+    const navigate = useNavigate()
+    const setDetails = useUserStore((state) => state.setDetails);
 
     const signIn = async () => {
+        const res = await fetch(`${process.env.REACT_APP_BASE_URL}/login`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        const res_data = await res.json();
+        console.log(res_data)
+        setDetails(res_data)    
+
+        setLoading(false);
+        if (res.status === 200) {
+            navigate("/");
+        } else {
+            alert("Could Not Sign In ");
+        }
 
     }
 

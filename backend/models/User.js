@@ -33,32 +33,32 @@ const UserSchema = new mongoose.Schema({
         default: 'https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png'
     },
     chess: {
-        Played: { type: Number },
-        Wins: { type: Number },
-        Losses: { type: Number },
+        Played: { type: Number, default: 0 },
+        Wins: { type: Number, default: 0 },
+        Losses: { type: Number, default: 0 },
     },
     candyCrush: {
-        points: { type: Number },
-        highScore: { type: Number },
+        points: { type: Number, default: 0 },
+        highScore: { type: Number, default: 0 },
     },
     wordle: {
-        points: { type: Number },
-        highScore: { type: Number },
+        points: { type: Number, default: 0 },
+        highScore: { type: Number, default: 0 },
     },
     ticTacToe: {
-        points: { type: Number },
-        highScore: { type: Number },
+        points: { type: Number, default: 0 },
+        highScore: { type: Number, default: 0 },
     },
     mario: {
-        points: { type: Number },
-        highScore: { type: Number },
+        points: { type: Number, default: 0 },
+        highScore: { type: Number, default: 0 },
     },
     tzfe: {
-        points: { type: Number },
-        highScore: { type: Number },
+        points: { type: Number, default: 0 },
+        highScore: { type: Number, default: 0 },
     },
     total: {
-        type: Number
+        type: Number, default: 0
     },
     tokens: [
         {
