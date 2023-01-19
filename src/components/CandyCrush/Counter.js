@@ -35,13 +35,13 @@ const Counter = ({ score }) => {
                 body: JSON.stringify({ game: 'CC', score: ans, total: score }),
             });
 
-            // getUser(token)
+            getUser(token)
 
             setLoading(false);
             if (res.status === 200) {
-                navigate("/");
+                navigate("/candy-crush");
             } else {
-                alert("Could Not Sign In ");
+                alert("Could Not Save Scores ");
             }
         }
 

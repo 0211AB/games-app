@@ -1,5 +1,4 @@
 .wordle {
-    background-color: #121213;
     height: 100vh;
 }
 
@@ -22,6 +21,7 @@
     width: 98vw;
     height: 45rem;
     display: flex;
+    justify-content: center;
     align-items: center;
     padding-top: 1rem;
     flex-direction: column;
@@ -47,7 +47,7 @@
     height: 100%;
     border: 1px solid #3a393c;
     border-radius: 4px;
-    color:#fff;
+    color: #fff;
     margin: 5px;
     display: grid;
     place-items: center;
@@ -120,7 +120,7 @@
     background-color: #3a393c;
 }
 
-.gameOver{
+.gameOver {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +130,53 @@
     margin-top: 60px;
 }
 
-.gameOver h2,.gameOver h1{
-    color:#fff;
+.gameOver h2,
+.gameOver h1 {
+    color: #fff;
     text-transform: capitalize;
+}
+
+.continue{
+    color:#FEC53A !important;
+    cursor: pointer;
+}
+
+@media (max-width:800px) {
+    .wordle-nav {
+        height: 4rem;
+    }
+
+    .wordle-nav h1 {
+        font-size: 3rem;
+    }
+
+    .wordle-board {
+        width: 25rem;
+        height: 40rem;
+    }
+
+    .wordle-keyboard {
+        width: 25rem;
+    }
+
+    .wordle-key {
+        width: 3.5rem;
+        height: 3rem;
+        font-size: 0.75rem;
+    }
+
+    #big {
+        width: 4rem;
+    }
+
+    .line1,
+    .line2,
+    .line3 {
+        margin: 2px;
+    }
+
+    .gameOver {
+        width: 25rem;
+        text-align: center;
+    }
 }

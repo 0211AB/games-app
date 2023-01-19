@@ -10,6 +10,8 @@ import yellow from '../../assets/candies/yellow.webp'
 import blank from '../../assets/candies/blank.jpg'
 import NavBar from '../Main/NavBar/NavBar'
 import Counter from './Counter'
+import userEvent from '@testing-library/user-event'
+import useUserStore from '../../store/user'
 
 const WIDTH = 8;
 const CANDY_COLORS = [
@@ -25,6 +27,7 @@ const CandyCrush = () => {
     const [currentColorArrangement, setcurrentColorArrangement] = useState([])
     const [beingDragged, setBeingDragged] = useState(null)
     const [beingReplaced, setBeingReplaced] = useState(null)
+    const user = useUserStore(state => state.user)
     const [score, setScore] = useState(0)
 
     const createBoard = () => {
@@ -172,7 +175,7 @@ const CandyCrush = () => {
                 <div className='cc-score'>
                     <h3>Current Score: {score}</h3>
                     <Counter score={score} />
-                    <h3>Your High Score : 0</h3>
+                    <h3>Your High Score : {user.candyCrush.highScore}</h3>
                 </div>
                 <br></br>
                 <div className='game'>

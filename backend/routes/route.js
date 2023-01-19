@@ -21,14 +21,31 @@ router.post("/login", async (req, res) => {
     }
 });
 
+router.get("/user-detail", auth, async (req, res) => {
+    try {
+        res.status(200).send(req.user)
+    }
+    catch (e) {
+        console.log(e);
+        res.status(400).send(e);
+    }
+});
+
+
 router.post("/update-score", auth, async (req, res) => {
     try {
         const user = await User.findOne({ email: req.email })
 
-        if (req.game === 'CC') {
-            user.candyCrush.points += + req.score
-            user.candyCrush.highScore = max(user.candyCrush.highScore, req.total)
-            user.total += user.total + req.score
+        if (req.body.game === 'CC') {
+            user.candyCrush.points += req.body.score
+            user.candyCrush.highScore = Math.max(user.candyCrush.highScore, req.body.total)
+            user.total += req.body.score
+        }
+        else if (req.body.game === 'WDLE') {
+            var score = 6 - parseInt(req.body.score)
+
+            user.wordle.points += score
+            user.total += score
         }
 
         const saved_user = await user.save();

@@ -21,6 +21,7 @@ module.exports = async (req, res, next) => {
         );
         // console.log(doctor)
         req.email = user.email;
+        req.user = user;
         next();
     } catch (error) {
         return res

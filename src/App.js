@@ -13,6 +13,7 @@ import Wordle from './components/Wordle/Wordle';
 
 import CCScores from './components/CandyCrush/CCScores';
 import CandyCrush from './components/CandyCrush/CandyCrush';
+import WordleScore from './components/Wordle/WordleScore';
 
 function App() {
   const { getUser, isLoggedIn, token } = useUserStore();
@@ -38,6 +39,8 @@ function App() {
         <Route path="/leaderboard" element={<LeaderBoard />}></Route>
         <Route path="/candy-crush" element={isLoggedIn ? <CCScores /> : <Navigate to="/login" />}></Route>
         <Route path="/candy-crush/game" element={isLoggedIn ? <CandyCrush /> : <Navigate to="/login" />}></Route>
+        <Route path="/wordle" element={isLoggedIn ? <WordleScore /> : <Navigate to="/login" />}></Route>
+        <Route path="/wordle/game" element={isLoggedIn ? <Wordle /> : <Navigate to="/login" />}></Route>
       </Routes>
     </>
   );

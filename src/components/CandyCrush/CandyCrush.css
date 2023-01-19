@@ -10,8 +10,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     color: aliceblue;
+    padding: 10px;
 }
 
 .game {
@@ -32,11 +34,32 @@
     align-items: center;
     flex-direction: column;
     color: aliceblue;
-    height: 80vh
+    height: 80vh;
+    padding: 10px;
+}
+
+.scoring h3 {
+    text-align: center;
 }
 
 .scoring a {
     color: #FEC53A;
     cursor: pointer;
     font-size: 2rem;
+}
+
+@media (max-width:800px) {
+    .cc-score h3 {
+        text-align: center;
+    }
+
+    .game {
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .game img {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
 }
