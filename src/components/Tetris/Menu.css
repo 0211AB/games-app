@@ -1,0 +1,17 @@
+.Menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .Button {
+    padding: 20px 20px;
+    font-size: 2em;
+    border-radius: 10px;
+    text-transform: capitalize;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 60px;
+    cursor: pointer;
+  }
+  

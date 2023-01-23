@@ -4,6 +4,11 @@
     align-items: center;
     padding: 3rem;
     flex-direction: column;
+    height:80vh;
+}
+
+.candy-crush-app h1{
+    color: aliceblue;
 }
 
 .cc-score {
@@ -36,6 +41,7 @@
     color: aliceblue;
     height: 80vh;
     padding: 10px;
+    margin-top: 5rem;
 }
 
 .scoring h3 {

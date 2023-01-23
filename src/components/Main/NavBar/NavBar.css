@@ -18,6 +18,7 @@ header {
     clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
     padding: 10px;
     line-height: 1.3rem;
+    cursor: pointer;
 }
 
 .logo p {
@@ -42,6 +43,7 @@ header {
     font-weight: bold;
     text-align: right;
     padding-right: 40px;
+    cursor: pointer;
 }
 
 @media (max-width:600px) {

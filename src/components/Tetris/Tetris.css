@@ -1,0 +1,16 @@
+.Tetris {
+  position: relative;
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+
+}
+
+
+.Tetris aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}

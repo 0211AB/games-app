@@ -7,10 +7,9 @@ import orange from '../../assets/candies/orange.webp'
 import purple from '../../assets/candies/purple.webp'
 import red from '../../assets/candies/red.webp'
 import yellow from '../../assets/candies/yellow.webp'
-import blank from '../../assets/candies/blank.jpg'
+import blank from '../../assets/candies/blank.png'
 import NavBar from '../Main/NavBar/NavBar'
 import Counter from './Counter'
-import userEvent from '@testing-library/user-event'
 import useUserStore from '../../store/user'
 
 const WIDTH = 8;
@@ -172,6 +171,7 @@ const CandyCrush = () => {
         <>
             <NavBar />
             <div className='candy-crush-app'>
+                <h1>CandyCrush</h1>
                 <div className='cc-score'>
                     <h3>Current Score: {score}</h3>
                     <Counter score={score} />

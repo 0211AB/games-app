@@ -8,12 +8,12 @@ import { Navigate, Route, Routes } from "react-router-dom";
 
 import LeaderBoard from './components/Main/LeaderBoard/LeaderBoard';
 import Main from './components/Main/Main';
-import ChessWrapper from './components/ChessBoard/ChessWrapper';
 import Wordle from './components/Wordle/Wordle';
 
 import CCScores from './components/CandyCrush/CCScores';
 import CandyCrush from './components/CandyCrush/CandyCrush';
 import WordleScore from './components/Wordle/WordleScore';
+import Game from './components/Tetris/Game'
 
 function App() {
   const { getUser, isLoggedIn, token } = useUserStore();
@@ -41,6 +41,7 @@ function App() {
         <Route path="/candy-crush/game" element={isLoggedIn ? <CandyCrush /> : <Navigate to="/login" />}></Route>
         <Route path="/wordle" element={isLoggedIn ? <WordleScore /> : <Navigate to="/login" />}></Route>
         <Route path="/wordle/game" element={isLoggedIn ? <Wordle /> : <Navigate to="/login" />}></Route>
+        <Route path="/tetris" element={isLoggedIn ? <Game rows={20} columns={10} /> : <Navigate to="/login" />}></Route>
       </Routes>
     </>
   );

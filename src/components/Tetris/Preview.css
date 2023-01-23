@@ -1,0 +1,26 @@
+.preview-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5rem;
+}
+
+.preview-map h1 {
+  color: white;
+}
+
+.Preview {
+  background: rgba(0, 0, 0, 0.5);
+  border: 10px solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+.Preview-board {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  width: 7rem;
+  height: 7rem;
+}
