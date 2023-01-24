@@ -12,7 +12,7 @@ export const useGameStats = () => {
 
   const addLinesCleared = useCallback((lines) => {
     setGameStats((previous) => {
-      const points = previous.points + lines * 100;
+      const points = previous.points + lines;
       const { linesPerLevel } = previous;
       const newLinesCompleted = previous.linesCompleted + lines;
       const level =
@@ -20,6 +20,9 @@ export const useGameStats = () => {
           ? previous.level + 1
           : previous.level;
       const linesCompleted = newLinesCompleted % linesPerLevel;
+
+      localStorage.setItem("points", points);
+      localStorage.setItem("level", level)
 
       return {
         level,

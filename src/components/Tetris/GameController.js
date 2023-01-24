@@ -11,7 +11,8 @@ const GameController = ({
     gameStats,
     player,
     setGameOver,
-    setPlayer
+    setPlayer,
+    setLoading
 }) => {
     const [dropTime, pauseDropTime, resumeDropTime] = useDropTime({
         gameStats
@@ -37,6 +38,7 @@ const GameController = ({
             }
         } else if (action === Action.Quit) {
             setGameOver(true);
+            setLoading(true);
         } else {
             if (actionIsDrop(action)) pauseDropTime();
             if (!dropTime) {
@@ -52,7 +54,8 @@ const GameController = ({
             board,
             player,
             setPlayer,
-            setGameOver
+            setGameOver,
+            setLoading
         });
     };
 

@@ -53,7 +53,7 @@ export const movePlayer = ({ delta, position, shape, board }) => {
     return { collided: isHit, nextPosition };
 };
 
-const attemptMovement = ({ board, action, player, setPlayer, setGameOver }) => {
+const attemptMovement = ({ board, action, player, setPlayer, setGameOver, setLoading }) => {
     const delta = { row: 0, column: 0 };
     let isFastDropping = false;
 
@@ -78,6 +78,7 @@ const attemptMovement = ({ board, action, player, setPlayer, setGameOver }) => {
     const isGameOver = collided && player.position.row === 0;
     if (isGameOver) {
         setGameOver(isGameOver);
+        setLoading(isGameOver)
     }
 
     setPlayer({
@@ -93,13 +94,14 @@ export const playerController = ({
     board,
     player,
     setPlayer,
-    setGameOver
+    setGameOver,
+    setLoading
 }) => {
     if (!action) return;
 
     if (action === Action.Rotate) {
         attemptRotation({ board, player, setPlayer });
     } else {
-        attemptMovement({ board, player, setPlayer, action, setGameOver });
+        attemptMovement({ board, player, setPlayer, action, setGameOver, setLoading });
     }
 };

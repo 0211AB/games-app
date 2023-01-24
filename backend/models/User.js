@@ -53,12 +53,18 @@ const UserSchema = new mongoose.Schema({
         points: { type: Number, default: 0 },
         highScore: { type: Number, default: 0 },
     },
+    tetris: {
+        points: { type: Number, default: 0 },
+        highScore: { type: Number, default: 0 },
+        maxLevelReached: { type: Number, default: 0 }
+    },
     tzfe: {
         points: { type: Number, default: 0 },
         highScore: { type: Number, default: 0 },
     },
     total: {
-        type: Number, default: 0
+        type: Number,
+        default: 0
     },
     tokens: [
         {

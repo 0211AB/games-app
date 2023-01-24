@@ -47,6 +47,14 @@ router.post("/update-score", auth, async (req, res) => {
             user.wordle.points += score
             user.total += score
         }
+        else if (req.body.game === 'TETRIS') {
+            var score = parseInt(req.body.score)
+
+            user.tetris.highScore = Math.max(user.tetris.highScore,score);
+            user.tetris.maxLevelReached = Math.max(user.tetris.maxLevelReached, parseInt(req.body.level))
+            user.tetris.points += score
+            user.total += score
+        }
 
         const saved_user = await user.save();
 
