@@ -7,7 +7,7 @@ const Menu = ({ onClick }) => (
     <div className='scoring'>
       <h1>Scoring And Controls</h1>
       <br></br>
-      <h3>You will have a Tetris board where there will be tetrominoes of different shapes and colors.1 Point will be awarded for every 10 lines cleared.</h3>
+      <h3>You will have a Tetris board where there will be tetrominoes of different shapes and colors. 1 Point will be awarded for every line cleared.</h3>
       <br></br>
       <h3> ArrowUp: Rotate</h3>
       <h3>ArrowDown: SlowDrop</h3>

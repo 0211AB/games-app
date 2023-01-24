@@ -55,6 +55,13 @@ router.post("/update-score", auth, async (req, res) => {
             user.tetris.points += score
             user.total += score
         }
+        else if (req.body.game === '2048') {
+            var score = parseInt(req.body.score)
+
+            user.tzfe.highScore = Math.max(user.tzfe.highScore,score);
+            user.tetris.tzfe += score
+            user.total += score
+        }
 
         const saved_user = await user.save();
 

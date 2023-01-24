@@ -118,7 +118,7 @@ const Games = () => {
                         <br />
                         <p>2048 is a game in which you manoeuvre tiles around a 4x4 board, merging tiles of the same value in an attempt to reach 2048.</p>
                         <br />
-                        <h4 onClick={() => { navigate('/2048') }}>Click Here To Play Now</h4>
+                        <h4 onClick={() => { navigate('/2048/rules') }}>Click Here To Play Now</h4>
                     </div>
                 </div>
             </div>

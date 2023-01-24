@@ -1,0 +1,565 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-content: center;
+    justify-content: center;
+    width: fit-content;
+    align-items: center;
+    margin: 3vh auto 4vh auto;
+}
+
+.col-sm {
+    position: relative;
+    width: fit-content;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*Game CSS*/
+
+.gameContainer {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 99vh;
+}
+
+.stats {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+
+.stats h1::first-letter {
+    color: #FEC53A;
+}
+
+.dashboard {
+    width: 50%;
+    /* position:relative; */
+    margin: 4rem;
+    top: 5%;
+    left: 5vw;
+    width: 40vw;
+    height: 40vw;
+    background: #fff;
+}
+
+.cell {
+    height: 25%;
+    width: 25%;
+    background: #10002b;
+}
+
+.number {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.08s linear;
+    transform: scale(1);
+    background: red;
+    font-size: 27px;
+    color: #f9f6f2;
+    font-weight: bold;
+}
+
+.n0 {
+    font-size: 50px;
+    color: #10002b;
+    background: #e7dcf5;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.n2 {
+    font-size: 50px;
+    color: #10002b;
+    background: #d8c1f6;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.n4 {
+    font-size: 50px;
+    color: #10002b;
+    background: #c8a5f7;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.n8 {
+    font-size: 50px;
+    color: #10002b;
+    background: #b17cf9;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.n16 {
+    font-size: 50px;
+    color: #10002b;
+    background: #9953fa;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.n32 {
+    font-size: 50px;
+    color: #10002b;
+    background: #7b2cbf;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.n64 {
+    font-size: 50px;
+    color: #f9f6f2;
+    background: #5a189a;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.n128 {
+    color: #f9f6f2;
+    background: #3c096c;
+    font-size: 37px;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.n256 {
+    font-size: 37px;
+    color: #f9f6f2;
+    background: #240046;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.n512 {
+    font-size: 37px;
+    color: #f9f6f2;
+    background: #f79483;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.n1024 {
+    font-size: 27px;
+    color: #f9f6f2;
+    background: #ff6b4f;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.n2048 {
+    font-size: 27px;
+    color: #f9f6f2;
+    background: #ff4a2b;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/*Above */
+
+@media only screen and (min-width: 1201px) {}
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {}
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {}
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 950px) {
+    .gameContainer {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cell {
+        width: 57.5px;
+        height: 57.5px;
+        margin-right: 10px;
+        border-radius: 3px;
+    }
+
+    .dashboard {
+        /* position: relative; */
+        top: 5%;
+        left: 5vw;
+        width: 75vw;
+        height: 75vw;
+    }
+
+    .n0 {
+        font-size: 40px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n2 {
+        font-size: 40px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n4 {
+        font-size: 40px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n8 {
+        font-size: 40px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n16 {
+        font-size: 40px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n32 {
+        font-size: 40px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n64 {
+        font-size: 40px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n128 {
+        font-size: 22px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n256 {
+        font-size: 22px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n512 {
+        font-size: 22px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n1024 {
+        font-size: 16px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n2048 {
+        font-size: 16px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+    .cell {
+        width: 57.5px;
+        height: 57.5px;
+        margin-right: 10px;
+        border-radius: 3px;
+    }
+
+    .dashboard {
+        /* position: relative; */
+        top: 5%;
+        left: 5vw;
+        width: 75vw;
+        height: 75vw;
+    }
+
+    .n0 {
+        font-size: 25px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n2 {
+        font-size: 25px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n4 {
+        font-size: 25px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n8 {
+        font-size: 25px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n16 {
+        font-size: 25px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n32 {
+        font-size: 25px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n64 {
+        font-size: 25px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n128 {
+        font-size: 17px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n256 {
+        font-size: 17px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n512 {
+        font-size: 17px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n1024 {
+        font-size: 13px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .n2048 {
+        font-size: 13px;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {}
