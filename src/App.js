@@ -15,6 +15,7 @@ import CCScores from './components/CandyCrush/CCScores';
 import CandyCrush from './components/CandyCrush/CandyCrush';
 import WordleScore from './components/Wordle/WordleScore';
 import Game from './components/Tetris/Game'
+import MainGame from './components/BreakOut/MainGame'
 import Scoring from './components/2048/Scoring';
 
 function App() {
@@ -46,6 +47,8 @@ function App() {
         <Route path="/tetris" element={isLoggedIn ? <Game rows={20} columns={10} /> : <Navigate to="/login" />}></Route>
         <Route path="/2048" element={isLoggedIn ? <Main2048 /> : <Navigate to="/login" />}></Route>
         <Route path="/2048/rules" element={isLoggedIn ? <Scoring /> : <Navigate to="/login" />}></Route>
+        <Route path="/breakout" element={isLoggedIn ? <MainGame /> : <Navigate to="/login" />}></Route>
+
       </Routes>
     </>
   );

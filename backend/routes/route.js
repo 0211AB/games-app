@@ -59,7 +59,14 @@ router.post("/update-score", auth, async (req, res) => {
             var score = parseInt(req.body.score)
 
             user.tzfe.highScore = Math.max(user.tzfe.highScore,score);
-            user.tetris.tzfe += score
+            user.tzfe.points += score
+            user.total += score
+        }
+        else if (req.body.game === 'BKOUT') {
+            var score =parseInt(req.body.score)
+
+            user.breakout.points += score
+            user.breakout.highScore=Math.max(score,user.breakout.highScore)
             user.total += score
         }
 
