@@ -31,6 +31,17 @@ router.get("/user-detail", auth, async (req, res) => {
     }
 });
 
+router.get("/scores", async (req, res) => {
+    try {
+        const user = await User.find({}).sort({ total: -1 }).limit(50)
+        res.status(200).send(user)
+    }
+    catch (e) {
+        console.log(e);
+        res.status(400).send(e);
+    }
+});
+
 
 router.post("/update-score", auth, async (req, res) => {
     try {
@@ -50,7 +61,7 @@ router.post("/update-score", auth, async (req, res) => {
         else if (req.body.game === 'TETRIS') {
             var score = parseInt(req.body.score)
 
-            user.tetris.highScore = Math.max(user.tetris.highScore,score);
+            user.tetris.highScore = Math.max(user.tetris.highScore, score);
             user.tetris.maxLevelReached = Math.max(user.tetris.maxLevelReached, parseInt(req.body.level))
             user.tetris.points += score
             user.total += score
@@ -58,15 +69,15 @@ router.post("/update-score", auth, async (req, res) => {
         else if (req.body.game === '2048') {
             var score = parseInt(req.body.score)
 
-            user.tzfe.highScore = Math.max(user.tzfe.highScore,score);
+            user.tzfe.highScore = Math.max(user.tzfe.highScore, score);
             user.tzfe.points += score
             user.total += score
         }
         else if (req.body.game === 'BKOUT') {
-            var score =parseInt(req.body.score)
+            var score = parseInt(req.body.score)
 
             user.breakout.points += score
-            user.breakout.highScore=Math.max(score,user.breakout.highScore)
+            user.breakout.highScore = Math.max(score, user.breakout.highScore)
             user.total += score
         }
 
