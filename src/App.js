@@ -16,6 +16,7 @@ import CandyCrush from './components/CandyCrush/CandyCrush';
 import WordleScore from './components/Wordle/WordleScore';
 import Game from './components/Tetris/Game'
 import MainGame from './components/BreakOut/MainGame'
+import ChessGame from './components/Chess/ChessGame'
 import Scoring from './components/2048/Scoring';
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
         <Route path="/2048" element={isLoggedIn ? <Main2048 /> : <Navigate to="/login" />}></Route>
         <Route path="/2048/rules" element={isLoggedIn ? <Scoring /> : <Navigate to="/login" />}></Route>
         <Route path="/breakout" element={isLoggedIn ? <MainGame /> : <Navigate to="/login" />}></Route>
-
+        <Route path="/chess" element={isLoggedIn ? <ChessGame /> : <Navigate to="/login" />}></Route>
       </Routes>
     </>
   );

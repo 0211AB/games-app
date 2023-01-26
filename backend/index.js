@@ -1,7 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const gameLogic = require('./game-logic')
 const bodyParser = require("body-parser");
+const socketio = require('socket.io');
 
 require("dotenv").config();
 
@@ -34,6 +36,16 @@ app.use(routes);
 //   });
 // }
 
-app.listen(port, () => {
-  console.log("App is running on port", port);
-});
+const httpServer = app.listen(port, () => { console.log(`Server listening on port ${port}`) });
+const io = socketio(httpServer,{
+  cors: {
+    origin: "*",
+    methods: '*',
+    credentials: true
+  }
+})
+
+io.on('connection', client => {
+  gameLogic.initializeGame(io, client)
+})
+
